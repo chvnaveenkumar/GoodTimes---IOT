@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Made with Thimble</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2>Good Times!!</h2>
+    <button onclick="controlLED()">Fetch Statistics</button>
+    <!-- <form method="post" action="https://api.particle.io/v1/devices/3c0063001051363036373538/resetStat?access_token=4dd7ab61aec7c8fe550071f985a66a124d2773a8">
+     <input type="submit" value="resetStat" />
+    </form> -->
+    <button onclick="reset()">Reset Statistics</button>
+    <button onclick="roll()">Rollback Statistics</button>
+
+    <br>
+    Mean:<p id="mean"></p>
+    Recent: <p id="recent"></p>
+    Range: <p id="range"></p>
+    <script src="amazing.js"></script>
+  </body>
+</html>
