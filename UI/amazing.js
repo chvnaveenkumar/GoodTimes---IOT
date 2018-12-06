@@ -1,8 +1,10 @@
 let urlmean = "https://api.particle.io/v1/devices/3c0063001051363036373538/mean?access_token=4dd7ab61aec7c8fe550071f985a66a124d2773a8"
 let urlrecent = "https://api.particle.io/v1/devices/3c0063001051363036373538/recent?access_token=4dd7ab61aec7c8fe550071f985a66a124d2773a8"
 let urlrange = "https://api.particle.io/v1/devices/3c0063001051363036373538/range?access_token=4dd7ab61aec7c8fe550071f985a66a124d2773a8"
+let urlvalues = "https://api.particle.io/v1/devices/3c0063001051363036373538/values?access_token=4dd7ab61aec7c8fe550071f985a66a124d2773a8"
 
 function controlLED(){
+  console.log(urlvalues);
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open( "GET", urlmean, false ); // false for synchronous request
 xmlHttp.send( null );
@@ -40,12 +42,11 @@ function reset(){
   }
 }
 
-let url = "https://api.particle.io/v1/devices/3c0063001051363036373538/rollback"
+let urlroll = "https://api.particle.io/v1/devices/3c0063001051363036373538/rollback"
 
 function roll(){
-
   let xhttp = new XMLHttpRequest()
-  xhttp.open("POST", url, true)
+  xhttp.open("POST", urlroll, true)
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("access_token=" + "4dd7ab61aec7c8fe550071f985a66a124d2773a8")
   xhttp.onreadystatechange = function() {
